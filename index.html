@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Education4ol | frontend task 2</title>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="hamburger-logo-group">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <img src="./images/logo.svg" alt="logo icon">
+
+                <nav class="menu hidden">
+                    <div class="slide-menu">
+                        <img id="btnMenuClose" src="./images/icon-close.svg" alt="icon close">
+
+                        <ul>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="cart-avatar-group">
+                <div class="btnCart">
+                    <img src="./images/icon-cart.svg" alt="cart icon">
+                    <div class="cart-count hidden">3</div>
+                </div>
+
+                <img class="avatar" src="./images/image-avatar.png" alt="image avatar">
+            </div>
+
+            <div class="cart hidden">
+                <div class="cart-header">Cart</div>
+                <div class="products-in-cart">
+                   
+                </div>
+                <div class="msg-empty">Your cart is empty.</div>
+                <div class="checkout hidden">Checkout</div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <section class="lightbox">
+                <img class="product-hero" src="./images/image-product-1.jpg" alt="image product">
+                <div class="previous arrow">
+                    <img src="./images/icon-previous.svg" alt="icon previous">
+                </div>
+                <div class="next arrow">
+                    <img src="./images/icon-next.svg" alt="icon next">
+                </div>
+                <div class="thumb-gallery">
+                    <div class="pic active">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-1">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-2">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-3">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-4">
+                    </div>
+                </div>
+            </section>
+
+            <section class="product">
+                <div class="company-name">dhanashree wagh company</div>
+                <div class="title">Chunky White Sneakers <div class="brand-name">(dhanashree's limited edition)</div></div>
+                <div class="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo reprehenderit nisi quasi atque hic, aperiam saepe, culpa quas necessitatibus quia voluptatibus, eveniet excepturi temporibus ab error assumenda magnam minus inventore.
+                </div>
+                <div class="price-wrapper">
+                    <div class="group">
+                        <div class="price">$5000.00</div>
+                        <div class="discount">90%</div>
+                    </div>
+                    <div class="old-price">$1250.00</div>
+                </div>
+
+                <div class="count-btn-group">
+                    <div class="counter-wrapper">
+                        <img id="btnMinus" src="./images/icon-minus.svg" alt="icon minus">
+                        <div class="counter">1</div>
+                        <img id="btnPlus" src="./images/icon-plus.svg" alt="icon plus">
+                    </div>
+
+                    <div class="btn">
+                        <img src="./images/icon-cart.svg" alt="icon cart">
+                        <p>Add to cart</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="overlay hidden">
+            <div class="btnClose">
+                <img id="btnOverlayClose" src="./images/icon-close.svg" alt="lightbox close">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDzRbSsfYrYgj9Kem22hR8uRMxRQ7RMoyI",
+          authDomain: "task2-e4ol.firebaseapp.com",
+          projectId: "task2-e4ol",
+          storageBucket: "task2-e4ol.appspot.com",
+          messagingSenderId: "993823262412",
+          appId: "1:993823262412:web:9f4419f527b76deee9a469",
+          measurementId: "G-84Z1RK2QYN"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
